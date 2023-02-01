@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F3BA5A651544CE8E85C953A /* Pods_PlanDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */; };
+		9BDE4FF4D255DDA90132C8FE /* Pods_PlanDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */; };
+		CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */; };
+		EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9077298397FF00797D27 /* AppDelegate.swift */; };
+		EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9079298397FF00797D27 /* SceneDelegate.swift */; };
+		EE9F90812983980000797D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F90802983980000797D27 /* Assets.xcassets */; };
+		EE9F90842983980000797D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9F90822983980000797D27 /* LaunchScreen.storyboard */; };
+		EE9F908F2983980100797D27 /* PlanDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F908E2983980100797D27 /* PlanDoTests.swift */; };
+		EE9F90992983980100797D27 /* PlanDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90982983980100797D27 /* PlanDoUITests.swift */; };
+		EE9F909B2983980100797D27 /* PlanDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F909A2983980100797D27 /* PlanDoUITestsLaunchTests.swift */; };
+		EE9F90A82983985D00797D27 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90A72983985D00797D27 /* MainViewController.swift */; };
+		EE9F90AB2983987200797D27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE9F90AA2983987200797D27 /* SnapKit */; };
+		EE9F90E92983E41700797D27 /* PlanDoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */; };
+		EE9F913029876B7600797D27 /* PlanDoCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE9F908B2983980100797D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE9F906C298397FF00797D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE9F9073298397FF00797D27;
+			remoteInfo = PlanDo;
+		};
+		EE9F90952983980100797D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE9F906C298397FF00797D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE9F9073298397FF00797D27;
+			remoteInfo = PlanDo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4251F1CE7CD1C16C9BD72CCF /* Pods-PlanDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo.debug.xcconfig"; path = "Target Support Files/Pods-PlanDo/Pods-PlanDo.debug.xcconfig"; sourceTree = "<group>"; };
+		42A82B7299F027826A894AB6 /* Pods-PlanDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo.release.xcconfig"; path = "Target Support Files/Pods-PlanDo/Pods-PlanDo.release.xcconfig"; sourceTree = "<group>"; };
+		61FE6ABF8DE7F0C3380D1B38 /* Pods-PlanDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.release.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.release.xcconfig"; sourceTree = "<group>"; };
+		792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDo_PlanDoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9359B8E7328C8BEB72342FE0 /* Pods-PlanDo-PlanDoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo-PlanDoUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo-PlanDoUITests.release.xcconfig"; path = "Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE9F9074298397FF00797D27 /* PlanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9F9077298397FF00797D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE9F9079298397FF00797D27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE9F90802983980000797D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE9F90832983980000797D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE9F90852983980000797D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9F908A2983980100797D27 /* PlanDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9F908E2983980100797D27 /* PlanDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoTests.swift; sourceTree = "<group>"; };
+		EE9F90942983980100797D27 /* PlanDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9F90982983980100797D27 /* PlanDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoUITests.swift; sourceTree = "<group>"; };
+		EE9F909A2983980100797D27 /* PlanDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE9F90A72983985D00797D27 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanDoCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoCollectionViewHeader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE9F9071298397FF00797D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F90AB2983987200797D27 /* SnapKit in Frameworks */,
+				9BDE4FF4D255DDA90132C8FE /* Pods_PlanDo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F90872983980100797D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F3BA5A651544CE8E85C953A /* Pods_PlanDoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F90912983980100797D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14DD458F6289033436FC4950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */,
+				792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */,
+				A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A8AA03318B227F9BAC1DD35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4251F1CE7CD1C16C9BD72CCF /* Pods-PlanDo.debug.xcconfig */,
+				42A82B7299F027826A894AB6 /* Pods-PlanDo.release.xcconfig */,
+				9359B8E7328C8BEB72342FE0 /* Pods-PlanDo-PlanDoUITests.debug.xcconfig */,
+				DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */,
+				E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */,
+				61FE6ABF8DE7F0C3380D1B38 /* Pods-PlanDoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE9F906B298397FF00797D27 = {
+			isa = PBXGroup;
+			children = (
+				EE9F9076298397FF00797D27 /* PlanDo */,
+				EE9F908D2983980100797D27 /* PlanDoTests */,
+				EE9F90972983980100797D27 /* PlanDoUITests */,
+				EE9F9075298397FF00797D27 /* Products */,
+				1A8AA03318B227F9BAC1DD35 /* Pods */,
+				14DD458F6289033436FC4950 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE9F9075298397FF00797D27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F9074298397FF00797D27 /* PlanDo.app */,
+				EE9F908A2983980100797D27 /* PlanDoTests.xctest */,
+				EE9F90942983980100797D27 /* PlanDoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE9F9076298397FF00797D27 /* PlanDo */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F9077298397FF00797D27 /* AppDelegate.swift */,
+				EE9F9079298397FF00797D27 /* SceneDelegate.swift */,
+				EE9F90A72983985D00797D27 /* MainViewController.swift */,
+				EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */,
+				EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */,
+				EE9F90802983980000797D27 /* Assets.xcassets */,
+				EE9F90822983980000797D27 /* LaunchScreen.storyboard */,
+				EE9F90852983980000797D27 /* Info.plist */,
+			);
+			path = PlanDo;
+			sourceTree = "<group>";
+		};
+		EE9F908D2983980100797D27 /* PlanDoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F908E2983980100797D27 /* PlanDoTests.swift */,
+			);
+			path = PlanDoTests;
+			sourceTree = "<group>";
+		};
+		EE9F90972983980100797D27 /* PlanDoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F90982983980100797D27 /* PlanDoUITests.swift */,
+				EE9F909A2983980100797D27 /* PlanDoUITestsLaunchTests.swift */,
+			);
+			path = PlanDoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE9F9073298397FF00797D27 /* PlanDo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9F909E2983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDo" */;
+			buildPhases = (
+				4F41D4DA862148C560575D5C /* [CP] Check Pods Manifest.lock */,
+				EE9F9070298397FF00797D27 /* Sources */,
+				EE9F9071298397FF00797D27 /* Frameworks */,
+				EE9F9072298397FF00797D27 /* Resources */,
+				C195FF4A28D29BD55EEF115B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanDo;
+			packageProductDependencies = (
+				EE9F90AA2983987200797D27 /* SnapKit */,
+			);
+			productName = PlanDo;
+			productReference = EE9F9074298397FF00797D27 /* PlanDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE9F90892983980100797D27 /* PlanDoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9F90A12983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDoTests" */;
+			buildPhases = (
+				23623D38388A1B13F335F80E /* [CP] Check Pods Manifest.lock */,
+				EE9F90862983980100797D27 /* Sources */,
+				EE9F90872983980100797D27 /* Frameworks */,
+				EE9F90882983980100797D27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE9F908C2983980100797D27 /* PBXTargetDependency */,
+			);
+			name = PlanDoTests;
+			productName = PlanDoTests;
+			productReference = EE9F908A2983980100797D27 /* PlanDoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE9F90932983980100797D27 /* PlanDoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9F90A42983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDoUITests" */;
+			buildPhases = (
+				72F63A55C3D22B469B935151 /* [CP] Check Pods Manifest.lock */,
+				EE9F90902983980100797D27 /* Sources */,
+				EE9F90912983980100797D27 /* Frameworks */,
+				EE9F90922983980100797D27 /* Resources */,
+				3496EFA37DC65F2CEE624A3A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE9F90962983980100797D27 /* PBXTargetDependency */,
+			);
+			name = PlanDoUITests;
+			productName = PlanDoUITests;
+			productReference = EE9F90942983980100797D27 /* PlanDoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE9F906C298397FF00797D27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EE9F9073298397FF00797D27 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EE9F90892983980100797D27 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EE9F9073298397FF00797D27;
+					};
+					EE9F90932983980100797D27 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EE9F9073298397FF00797D27;
+					};
+				};
+			};
+			buildConfigurationList = EE9F906F298397FF00797D27 /* Build configuration list for PBXProject "PlanDo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE9F906B298397FF00797D27;
+			packageReferences = (
+				EE9F90A92983987200797D27 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = EE9F9075298397FF00797D27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE9F9073298397FF00797D27 /* PlanDo */,
+				EE9F90892983980100797D27 /* PlanDoTests */,
+				EE9F90932983980100797D27 /* PlanDoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE9F9072298397FF00797D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F90842983980000797D27 /* LaunchScreen.storyboard in Resources */,
+				EE9F90812983980000797D27 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F90882983980100797D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F90922983980100797D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23623D38388A1B13F335F80E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlanDoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3496EFA37DC65F2CEE624A3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F41D4DA862148C560575D5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlanDo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72F63A55C3D22B469B935151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlanDo-PlanDoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C195FF4A28D29BD55EEF115B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlanDo/Pods-PlanDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PlanDo/Pods-PlanDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlanDo/Pods-PlanDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE9F9070298397FF00797D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F90A82983985D00797D27 /* MainViewController.swift in Sources */,
+				EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */,
+				EE9F90E92983E41700797D27 /* PlanDoCollectionViewCell.swift in Sources */,
+				EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */,
+				EE9F913029876B7600797D27 /* PlanDoCollectionViewHeader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F90862983980100797D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F908F2983980100797D27 /* PlanDoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9F90902983980100797D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9F909B2983980100797D27 /* PlanDoUITestsLaunchTests.swift in Sources */,
+				EE9F90992983980100797D27 /* PlanDoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE9F908C2983980100797D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE9F9073298397FF00797D27 /* PlanDo */;
+			targetProxy = EE9F908B2983980100797D27 /* PBXContainerItemProxy */;
+		};
+		EE9F90962983980100797D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE9F9073298397FF00797D27 /* PlanDo */;
+			targetProxy = EE9F90952983980100797D27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE9F90822983980000797D27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE9F90832983980000797D27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE9F909C2983980100797D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE9F909D2983980100797D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE9F909F2983980100797D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4251F1CE7CD1C16C9BD72CCF /* Pods-PlanDo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4A6TH8JR3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanDo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrunzap.PlanDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE9F90A02983980100797D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A82B7299F027826A894AB6 /* Pods-PlanDo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4A6TH8JR3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanDo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrunzap.PlanDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE9F90A22983980100797D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4A6TH8JR3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrunzap.PlanDoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanDo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanDo";
+			};
+			name = Debug;
+		};
+		EE9F90A32983980100797D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61FE6ABF8DE7F0C3380D1B38 /* Pods-PlanDoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4A6TH8JR3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrunzap.PlanDoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanDo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlanDo";
+			};
+			name = Release;
+		};
+		EE9F90A52983980100797D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9359B8E7328C8BEB72342FE0 /* Pods-PlanDo-PlanDoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4A6TH8JR3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrunzap.PlanDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlanDo;
+			};
+			name = Debug;
+		};
+		EE9F90A62983980100797D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4A6TH8JR3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mrunzap.PlanDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlanDo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE9F906F298397FF00797D27 /* Build configuration list for PBXProject "PlanDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9F909C2983980100797D27 /* Debug */,
+				EE9F909D2983980100797D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9F909E2983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9F909F2983980100797D27 /* Debug */,
+				EE9F90A02983980100797D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9F90A12983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9F90A22983980100797D27 /* Debug */,
+				EE9F90A32983980100797D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9F90A42983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9F90A52983980100797D27 /* Debug */,
+				EE9F90A62983980100797D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE9F90A92983987200797D27 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE9F90AA2983987200797D27 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE9F90A92983987200797D27 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EE9F906C298397FF00797D27 /* Project object */;
+}
