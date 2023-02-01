@@ -39,8 +39,6 @@ class MainViewController: UICollectionViewController {
             $0.height.width.equalTo(70)
             $0.bottom.equalToSuperview().inset(30)
             $0.trailing.equalToSuperview().inset(70)
-            
-            
         }
     }
 }
