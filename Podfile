@@ -9,6 +9,7 @@ target 'PlanDo' do
   pod 'FSCalendar'
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
+  pod 'RxGesture'
   target 'PlanDoTests' do
     inherit! :search_paths
     # Pods for testing
