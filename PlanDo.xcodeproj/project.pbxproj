@@ -10,6 +10,7 @@
 		4F3BA5A651544CE8E85C953A /* Pods_PlanDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */; };
 		9BDE4FF4D255DDA90132C8FE /* Pods_PlanDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */; };
 		CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */; };
+		EE19A1B1298CB512008CDF5C /* NewPlanDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19A1B0298CB512008CDF5C /* NewPlanDoViewController.swift */; };
 		EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9077298397FF00797D27 /* AppDelegate.swift */; };
 		EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9079298397FF00797D27 /* SceneDelegate.swift */; };
 		EE9F90812983980000797D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F90802983980000797D27 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo-PlanDoUITests.release.xcconfig"; path = "Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE19A1B0298CB512008CDF5C /* NewPlanDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanDoViewController.swift; sourceTree = "<group>"; };
 		EE9F9074298397FF00797D27 /* PlanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9F9077298397FF00797D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9F9079298397FF00797D27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				EE9F9079298397FF00797D27 /* SceneDelegate.swift */,
 				EE9F90A72983985D00797D27 /* MainViewController.swift */,
 				EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */,
+				EE19A1B0298CB512008CDF5C /* NewPlanDoViewController.swift */,
 				EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */,
 				EE9F90802983980000797D27 /* Assets.xcassets */,
 				EE9F90822983980000797D27 /* LaunchScreen.storyboard */,
@@ -421,6 +424,7 @@
 				EE9F90E92983E41700797D27 /* PlanDoCollectionViewCell.swift in Sources */,
 				EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */,
 				EE9F913029876B7600797D27 /* PlanDoCollectionViewHeader.swift in Sources */,
+				EE19A1B1298CB512008CDF5C /* NewPlanDoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

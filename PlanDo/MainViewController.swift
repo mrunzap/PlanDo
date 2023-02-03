@@ -22,13 +22,16 @@ class MainViewController: UIViewController {
         view.backgroundColor = .purple
         return view
     }()
+    
     let button: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
         let configuration = UIImage.SymbolConfiguration(pointSize: 1000)
         button.setPreferredSymbolConfiguration(configuration, forImageIn: .normal)
+        button.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         return button
     }()
+    
     let searchBar = UISearchBar()
     var collectionView : UICollectionView = {
             var layout = UICollectionViewFlowLayout()
@@ -52,6 +55,14 @@ class MainViewController: UIViewController {
         calendar.scope = .week
         return calendar
     }()
+    
+    @objc func addButtonTapped(){
+        let viewController = NewPlanDoViewController()
+        //viewController.modalPresentationStyle = .currentContext
+        //viewController.preferredContentSize = CGSize(width: 400, height: 400)
+        present(viewController, animated: false)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
