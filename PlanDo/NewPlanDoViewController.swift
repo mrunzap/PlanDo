@@ -20,6 +20,16 @@ class NewPlanDoViewController: UIViewController {
     }()
     
     // 시작일 종료일 담는 스택뷰
+    private lazy var entireDateStackView : UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.alignment = .fill
+        stack.distribution = .equalSpacing
+        stack.spacing = 8
+        return stack
+    }()
+    
+    // 시작일 종료일 담는 스택뷰
     private lazy var dateStackView : UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -29,21 +39,16 @@ class NewPlanDoViewController: UIViewController {
         return stack
     }()
     
-    private lazy var toolBar: UIToolbar = {
-        let toolbar = UIToolbar()
-        let cancelBarButtonItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: nil)
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let titleBarButtonItem = UIBarButtonItem(title: "할일 추가", style: .plain, target: self, action: nil)
-        let saveBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: nil)
+    private lazy var toolBar: UINavigationBar = {
+        let navigationBar = UINavigationBar()
+        
+        let item = UINavigationItem()
+        item.leftBarButtonItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(cancelButtonTapped))
+        item.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: nil)
 
-        var items = [UIBarButtonItem]()
-        [cancelBarButtonItem,flexibleSpace,titleBarButtonItem,flexibleSpace,saveBarButtonItem].forEach {
-            $0.tintColor = .green
-            items.append($0)
-        }
-
-        toolbar.setItems(items, animated: true)
-        return toolbar
+        item.title = "할일 추가"
+        navigationBar.setItems([item], animated: true)
+        return navigationBar
     }()
 
     
@@ -51,10 +56,8 @@ class NewPlanDoViewController: UIViewController {
     //TODO - underLine추가하기[x]
     private lazy var titleTextField : UITextField = {
         let textField = UITextField()
-        textField.text = "점심먹기"
-//        textField.layer.borderWidth = 1
-//        textField.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-//        textField.layer.cornerRadius = 0.5
+        textField.placeholder = "할일을 등록하세요."
+        textField.backgroundColor = .groupTableViewBackground
         return textField
     }()
     
@@ -62,11 +65,10 @@ class NewPlanDoViewController: UIViewController {
     private lazy var startButton: UIButton = {
         let button = UIButton()
         button.setTitle("시작일", for: .normal)
+
         button.tintColor = .black
         button.setTitleColor(.black, for: .normal)
-        //button.layer.borderWidth = 1
-        //button.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        //button.layer.cornerRadius = 0.5
+        
         button.addTarget(self, action: #selector(startDateButtonTapped) ,for: .touchUpInside)
         return button
     }()
@@ -76,9 +78,6 @@ class NewPlanDoViewController: UIViewController {
         let button = UIButton()
         button.setTitle("종료일", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        //button.layer.borderWidth = 1
-        //button.layer.borderColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        //button.layer.cornerRadius = 0.5
         button.addTarget(self, action: #selector(endDateButtonTapped), for: .touchUpInside)
         return button
     }()
@@ -86,10 +85,21 @@ class NewPlanDoViewController: UIViewController {
     // 메모
     private lazy var discriptionTextField: UITextField = {
         let textField = UITextField()
-        textField.text = "메모추가"
+        textField.placeholder = "메모 등록하세요."
+        textField.backgroundColor = .groupTableViewBackground
         return textField
     }()
     
+    // DatePicker
+    
+    private lazy var datePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.preferredDatePickerStyle = .inline
+        picker.datePickerMode = .date
+        picker.contentMode = .scaleAspectFill
+        picker.layer.isHidden = true
+        return picker
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -99,18 +109,40 @@ class NewPlanDoViewController: UIViewController {
     private func addView(){
         
         view.addSubview(entireStackView)
+        entireStackView.addSubview(toolBar)
+        entireStackView.addSubview(titleTextField)
+        entireStackView.addSubview(entireDateStackView)
+        entireDateStackView.addSubview(dateStackView)
+        dateStackView.addSubview(startButton)
+        dateStackView.addSubview(endButton)
+        entireDateStackView.addSubview(datePicker)
+        entireDateStackView.addSubview(discriptionTextField)
         
         entireStackView.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-        entireStackView.addSubview(toolBar)
         
-
-        entireStackView.addSubview(titleTextField)
-        entireStackView.addSubview(dateStackView)
+        toolBar.snp.makeConstraints {
+            $0.top.trailing.leading.equalTo(entireStackView.safeAreaLayoutGuide)
+            $0.height.equalTo(70)
+        }
+        titleTextField.snp.makeConstraints {
+            $0.top.equalTo(toolBar.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(70)
+        }
         
-        dateStackView.addSubview(startButton)
-        dateStackView.addSubview(endButton)
+        entireDateStackView.snp.makeConstraints {
+            $0.top.equalTo(titleTextField.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        dateStackView.snp.makeConstraints {
+            $0.top.equalTo(entireDateStackView.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(70)
+        }
         
         startButton.snp.makeConstraints {
             $0.top.equalTo(dateStackView.safeAreaLayoutGuide)
@@ -125,39 +157,52 @@ class NewPlanDoViewController: UIViewController {
             $0.width.equalTo(dateStackView.snp.width).dividedBy(2)
             $0.height.equalToSuperview()
         }
-        
-        entireStackView.addSubview(discriptionTextField)
-        
-        toolBar.snp.makeConstraints {
-            $0.top.trailing.leading.equalTo(entireStackView.safeAreaLayoutGuide)
-            $0.height.equalTo(70)
-        }
-        titleTextField.snp.makeConstraints {
-            $0.top.equalTo(toolBar.snp.bottom)
+        datePicker.snp.makeConstraints {
+            $0.top.equalTo(startButton.snp.bottom)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(70)
+            $0.width.equalToSuperview().inset(20)
+            $0.height.equalTo(0)
         }
+
         
-        dateStackView.snp.makeConstraints {
-            $0.top.equalTo(titleTextField.snp.bottom)
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(70)
-        }
-        
+       
         discriptionTextField.snp.makeConstraints {
-            $0.top.equalTo(dateStackView.snp.bottom)
+            $0.top.equalTo(datePicker.snp.bottom).inset(-20)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.bottom.equalTo(endButton.safeAreaLayoutGuide)
+            $0.bottom.equalTo(entireDateStackView.safeAreaLayoutGuide)
         }
     }
     
     // 시작일 버튼 이벤트
     @objc func startDateButtonTapped(){
-        
+        startButton.isSelected = !startButton.isSelected
+       
+        datePicker.layer.isHidden = startButton.isSelected ? false: true
+
+        datePicker.snp.updateConstraints {
+            $0.top.equalTo(startButton.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.width.equalToSuperview().inset(20)
+            $0.height.equalTo(startButton.isSelected ? 350 : 0)
+        }
     }
     
     // 종료일 버튼 이벤트
     @objc func endDateButtonTapped(){
-        
+        endButton.isSelected = !endButton.isSelected
+       
+        datePicker.layer.isHidden = endButton.isSelected ? false: true
+
+        datePicker.snp.updateConstraints {
+            $0.top.equalTo(startButton.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.width.equalToSuperview().inset(20)
+            $0.height.equalTo(endButton.isSelected ? 350 : 0)
+        }
+    }
+    
+    // 취소버튼 이벤트
+    @objc func cancelButtonTapped(){
+        self.dismiss(animated: true)
     }
 }
