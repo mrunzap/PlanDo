@@ -177,7 +177,7 @@ extension NewPlanDoTableViewController: UICollectionViewDelegateFlowLayout {
 }
 
 // 버튼 이벤트 처리
-extension NewPlanDoTableViewController {
+extension NewPlanDoTableViewController {   
     // 취소버튼 이벤트
     @objc func cancelButtonTapped(){
         self.dismiss(animated: true)
