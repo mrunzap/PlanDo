@@ -58,7 +58,7 @@ class NewPlanDoViewController: UIViewController {
     private lazy var titleTextField : UITextField = {
         let textField = UITextField()
         textField.placeholder = "할일을 등록하세요."
-        textField.backgroundColor = .groupTableViewBackground
+        //textField.backgroundColor = .groupTableViewBackground
         return textField
     }()
     
@@ -87,7 +87,7 @@ class NewPlanDoViewController: UIViewController {
     private lazy var discriptionTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "메모 등록하세요."
-        textField.backgroundColor = .groupTableViewBackground
+        //textField.backgroundColor = .groupTableViewBackground
         return textField
     }()
     
@@ -98,7 +98,7 @@ class NewPlanDoViewController: UIViewController {
         picker.preferredDatePickerStyle = .inline
         picker.datePickerMode = .date
         picker.contentMode = .scaleAspectFill
-        picker.layer.isHidden = true
+
         return picker
     }()
     override func viewDidLoad() {

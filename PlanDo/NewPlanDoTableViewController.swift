@@ -23,8 +23,8 @@ class NewPlanDoTableViewController: UIViewController {
     var toolbar : UIToolbar = {
         let headerView = UIToolbar()
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-        let cancelItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: nil)
-        let saveitem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: nil)
+        let cancelItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(cancelButtonTapped))
+        let saveitem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButtonTapped))
         var items = [UIBarButtonItem]()
         [cancelItem,flexibleSpace,saveitem].forEach {
             items.append($0)
@@ -32,6 +32,9 @@ class NewPlanDoTableViewController: UIViewController {
         headerView.setItems(items, animated: false)
         return headerView
     }()
+    
+    let viewModel = PlanDoViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -124,7 +127,8 @@ extension NewPlanDoTableViewController: UICollectionViewDataSource {
         case 0 :
             return collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCell", for: indexPath) as! TitleCell
         case 1:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as! DateCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as! DateCell
+            return cell
         case 2:
             return collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionCell", for: indexPath) as! DescriptionCell
         default:
@@ -152,7 +156,7 @@ extension NewPlanDoTableViewController: UICollectionViewDelegate {
 
 extension NewPlanDoTableViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var height: CGFloat
+
         switch indexPath.section {
         case 0 :
             return CGSize(width: collectionView.bounds.width, height: 100)
@@ -169,5 +173,24 @@ extension NewPlanDoTableViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         print("section:\(section)")
         return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+    }
+}
+
+// 버튼 이벤트 처리
+extension NewPlanDoTableViewController {
+    // 취소버튼 이벤트
+    @objc func cancelButtonTapped(){
+        self.dismiss(animated: true)
+    }
+    
+    // 저장버튼 이벤트
+    @objc func saveButtonTapped(){
+//        guard let startDate = startButton.currentTitle,
+//              let endDate  = endButton.currentTitle else { return }
+//        let title = titleTextField.text ?? "제목없음"
+//        let description = discriptionTextField.text ?? ""
+//         //Todo객체 생성함
+//        let planDo = PlanDoManager.shared.createPlaDo(title, startDate: startDate, endDate: endDate, description: description)
+//        viewModel.addTodo(planDo)
     }
 }
