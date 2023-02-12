@@ -7,9 +7,10 @@
 
 import UIKit
 import SnapKit
-import SkyFloatingLabelTextField
 
 class NewPlanDoViewController: UIViewController {
+    
+    let viewModel = PlanDoViewModel()
     
     // 전체 스택뷰
     private lazy var entireStackView : UIStackView = {
@@ -44,7 +45,7 @@ class NewPlanDoViewController: UIViewController {
         
         let item = UINavigationItem()
         item.leftBarButtonItem = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(cancelButtonTapped))
-        item.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: nil)
+        item.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(saveButtonTapped))
 
         item.title = "할일 추가"
         navigationBar.setItems([item], animated: true)
@@ -163,9 +164,6 @@ class NewPlanDoViewController: UIViewController {
             $0.width.equalToSuperview().inset(20)
             $0.height.equalTo(0)
         }
-
-        
-       
         discriptionTextField.snp.makeConstraints {
             $0.top.equalTo(datePicker.snp.bottom).inset(-20)
             $0.leading.trailing.equalToSuperview().inset(20)
@@ -204,5 +202,16 @@ class NewPlanDoViewController: UIViewController {
     // 취소버튼 이벤트
     @objc func cancelButtonTapped(){
         self.dismiss(animated: true)
+    }
+    
+    // 저장버튼 이벤트
+    @objc func saveButtonTapped(){
+        guard let startDate = startButton.currentTitle,
+              let endDate  = endButton.currentTitle else { return }
+        let title = titleTextField.text ?? "제목없음"
+        let description = discriptionTextField.text ?? ""
+        // Todo객체 생성함
+        let planDo = PlanDoManager.shared.createPlaDo(title, startDate: startDate, endDate: endDate, description: description)
+        viewModel.addTodo(planDo)
     }
 }

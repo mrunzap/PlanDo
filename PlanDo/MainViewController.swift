@@ -57,10 +57,10 @@ class MainViewController: UIViewController {
     }()
     
     @objc func addButtonTapped(){
-        let viewController = NewPlanDoViewController()
+        let viewController = NewPlanDoTableViewController()
         //viewController.modalPresentationStyle = .currentContext
         //viewController.preferredContentSize = CGSize(width: 400, height: 400)
-        present(viewController, animated: false)
+        self.present(viewController, animated: true)
         
     }
     override func viewDidLoad() {
