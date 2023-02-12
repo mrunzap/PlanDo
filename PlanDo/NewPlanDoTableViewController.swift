@@ -173,11 +173,11 @@ extension NewPlanDoTableViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         print("section:\(section)")
         return UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-    }
+    }  
 }
 
 // 버튼 이벤트 처리
-extension NewPlanDoTableViewController {   
+extension NewPlanDoTableViewController {
     // 취소버튼 이벤트
     @objc func cancelButtonTapped(){
         self.dismiss(animated: true)

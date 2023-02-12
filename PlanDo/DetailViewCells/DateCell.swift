@@ -72,7 +72,7 @@ class DateCell: UICollectionViewCell {
         picker.preferredDatePickerStyle = .automatic
         picker.datePickerMode = .date
         picker.contentMode = .scaleToFill
-        picker.layer.cornerRadius = 15  
+        picker.layer.cornerRadius = 15
         picker.locale = Locale(identifier: "ko")
         picker.addTarget(self, action: #selector(startDateTapped(_ :)), for: .valueChanged)
         return picker
@@ -100,7 +100,7 @@ class DateCell: UICollectionViewCell {
             $0.top.leading.trailing.bottom.equalToSuperview().inset(20)
         }
     }
-    
+       
     @objc func startDateTapped(_ sender: UIDatePicker) {
         print(sender.date)
     }
