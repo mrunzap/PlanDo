@@ -58,9 +58,9 @@ public class Storage {
         let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
         guard FileManager.default.fileExists(atPath: url.path) else { return nil }
         guard let data = FileManager.default.contents(atPath: url.path) else { return nil }
-        
+
         let decoder = JSONDecoder()
-        
+        print("type:\(type) data:\(data)")
         do {
             let model = try decoder.decode(type, from: data)
             return model

@@ -10,6 +10,8 @@ import SnapKit
 
 class TitleCell: UICollectionViewCell {
     // 할일 타이틀
+    var titleLabel:((_ title: String) ->Void)?
+    
     private lazy var titleTextField : UITextField = {
         let textField = UITextField()
         textField.placeholder = "할일을 등록하세요."
@@ -21,12 +23,18 @@ class TitleCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        titleTextField.delegate = self
         contentView.addSubview(titleTextField)
-        
-        
         titleTextField.snp.makeConstraints {
             $0.top.bottom.equalToSuperview().offset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
+    }
+}
+
+extension TitleCell : UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = textField.text else { return }
+        self.titleLabel?(text)
     }
 }

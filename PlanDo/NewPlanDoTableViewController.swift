@@ -10,6 +10,11 @@ import SnapKit
 import Kingfisher
 class NewPlanDoTableViewController: UIViewController {
     
+    var startDateTemp: String = ""
+    var endDateTemp: String = ""
+    var titleTemp:String = ""
+    var descriptionTemp: String?
+    
     var collectionView : UICollectionView = {
         var layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -39,6 +44,7 @@ class NewPlanDoTableViewController: UIViewController {
         super.viewDidLoad()
         
         configureContraints()
+        
     }
     
     func configureContraints(){
@@ -125,12 +131,26 @@ extension NewPlanDoTableViewController: UICollectionViewDataSource {
         
         switch indexPath.section {
         case 0 :
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCell", for: indexPath) as! TitleCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCell", for: indexPath) as! TitleCell
+            cell.titleLabel = { [weak self] title in
+                self?.titleTemp = title
+            }
+            return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as! DateCell
+            cell.startDate = { [weak self] date in
+                self?.startDateTemp = date
+            }
+            cell.endDate = { [weak self] date in
+                self?.endDateTemp = date
+            }
             return cell
         case 2:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionCell", for: indexPath) as! DescriptionCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionCell", for: indexPath) as! DescriptionCell
+            cell.descriptionLabel = { [weak self] description in
+                self?.descriptionTemp = description
+            }
+            return cell
         default:
             return UICollectionViewCell()
         }
@@ -185,12 +205,8 @@ extension NewPlanDoTableViewController {
     
     // 저장버튼 이벤트
     @objc func saveButtonTapped(){
-//        guard let startDate = startButton.currentTitle,
-//              let endDate  = endButton.currentTitle else { return }
-//        let title = titleTextField.text ?? "제목없음"
-//        let description = discriptionTextField.text ?? ""
-//         //Todo객체 생성함
-//        let planDo = PlanDoManager.shared.createPlaDo(title, startDate: startDate, endDate: endDate, description: description)
-//        viewModel.addTodo(planDo)
+         //Todo객체 생성함
+        let planDo = PlanDoManager.shared.createPlanDo(title: titleTemp, startDate: startDateTemp, endDate: endDateTemp, description: descriptionTemp ?? "")
+        viewModel.addTodo(planDo)
     }
 }

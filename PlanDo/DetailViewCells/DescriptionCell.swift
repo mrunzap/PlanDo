@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class DescriptionCell: UICollectionViewCell {
+    var descriptionLabel:((_ description: String)->Void)?
     // 할일 타이틀
     private lazy var titleTextView : UITextView = {
         let frame = CGRect(x: 0, y: 0, width: contentView.bounds.width, height: 800)
@@ -22,6 +23,8 @@ class DescriptionCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        titleTextView.delegate = self
         contentView.addSubview(titleTextView)
         
         
@@ -30,5 +33,21 @@ class DescriptionCell: UICollectionViewCell {
             $0.leading.trailing.bottom.equalToSuperview().inset(20)
             $0.height.equalTo(400)
         }
+    }
+}
+
+extension DescriptionCell: UITextViewDelegate {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        print("textViewShouldEndEditing\(textView)")
+        return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        print("textViewDidEndEditing\(textView)")
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        self.descriptionLabel?(text)
+        return true
     }
 }

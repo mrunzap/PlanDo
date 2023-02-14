@@ -17,7 +17,8 @@ class DateCell: UICollectionViewCell {
     // >>>PlanDO객체로 변환
     // >>>>최종 저장확인
 
-    // 시작일 종료일 담는 스택뷰
+    var startDate:((_ startDate: String)->Void)?
+    var endDate:((_ endDate: String)->Void)?
     private lazy var entireDateStackView : UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -35,7 +36,7 @@ class DateCell: UICollectionViewCell {
         stack.distribution = .fillEqually
         stack.spacing = 2
         stack.backgroundColor = .blue
-        stack.layer.cornerRadius = 15
+        stack.layer.cornerRadius = 159
         return stack
     }()
     // 시작일 종료일 담는 스택뷰
@@ -102,10 +103,16 @@ class DateCell: UICollectionViewCell {
     }
        
     @objc func startDateTapped(_ sender: UIDatePicker) {
-        print(sender.date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        self.startDate?(dateFormatter.string(from: sender.date))
     }
     
     @objc func endDateTapped(_ sender: UIDatePicker) {
-        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ko")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        self.endDate?(dateFormatter.string(from: sender.date))
     }
 }

@@ -206,12 +206,12 @@ class NewPlanDoViewController: UIViewController {
     
     // 저장버튼 이벤트
     @objc func saveButtonTapped(){
-        guard let startDate = startButton.currentTitle,
-              let endDate  = endButton.currentTitle else { return }
-        let title = titleTextField.text ?? "제목없음"
-        let description = discriptionTextField.text ?? ""
-        // Todo객체 생성함
-        let planDo = PlanDoManager.shared.createPlaDo(title, startDate: startDate, endDate: endDate, description: description)
-        viewModel.addTodo(planDo)
+//        guard let startDate = startButton.currentTitle,
+//              let endDate  = endButton.currentTitle else { return }
+//        let title = titleTextField.text ?? "제목없음"
+//        let description = discriptionTextField.text ?? ""
+//        // Todo객체 생성함
+//        let planDo = PlanDoManager.shared.createPlanDo(title: titl, startDate: startDate, endDate: endDate, description: description)
+//        viewModel.addTodo(planDo)
     }
 }

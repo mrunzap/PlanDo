@@ -14,7 +14,8 @@ import RxSwift
 
 
 class MainViewController: UIViewController {
-    
+
+    let viewModel = PlanDoViewModel()
     var calendarHeightConstraint = NSLayoutConstraint()
     var headerSize:CGFloat?
     let buttonView : UIView = {
@@ -105,14 +106,14 @@ class MainViewController: UIViewController {
                     self.calendar.setScope(.month, animated: false)
                 }
             }
-        
+        viewModel.loadTasks()
     }
 }
 
 // datasource
 extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.planDos.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -122,6 +123,8 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlanDoCollectionViewCell", for: indexPath) as? PlanDoCollectionViewCell else {
             return UICollectionViewCell()
         }
+         let plando = viewModel.planDos[indexPath.row]
+         cell.updasteUI(planDo: plando)
         return cell
     }
     

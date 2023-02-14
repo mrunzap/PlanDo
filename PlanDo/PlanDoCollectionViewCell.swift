@@ -16,12 +16,15 @@ class PlanDoCollectionViewCell : UICollectionViewCell {
         super.layoutSubviews()
         
         contentView.addSubview(titleLabel)
-        titleLabel.text = "vue.js 학습하기"
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(contentView.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(40)
         }
+    }
+    func updasteUI(planDo: PlanDo){
+        print("cell:\(planDo)")
+        titleLabel.text = planDo.title
     }
 }
