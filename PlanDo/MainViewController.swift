@@ -15,6 +15,7 @@ import RxSwift
 
 class MainViewController: UIViewController {
 
+    // Obseravale 추가.
     let viewModel = PlanDoViewModel()
     var calendarHeightConstraint = NSLayoutConstraint()
     var headerSize:CGFloat?
@@ -58,19 +59,21 @@ class MainViewController: UIViewController {
     }()
     
     @objc func addButtonTapped(){
-        let viewController = NewPlanDoTableViewController()
+        let viewController = NewPlanView()
+        viewController.delegate = self
         //viewController.modalPresentationStyle = .currentContext
         //viewController.preferredContentSize = CGSize(width: 400, height: 400)
         self.present(viewController, animated: true)
         
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.titleView = searchBar
         view.backgroundColor = .systemBackground
         calendar.delegate = self
-
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(PlanDoCollectionViewCell.self, forCellWithReuseIdentifier: "PlanDoCollectionViewCell")
@@ -107,6 +110,7 @@ class MainViewController: UIViewController {
                 }
             }
         viewModel.loadTasks()
+        print("viewdidload")
     }
 }
 
@@ -164,11 +168,11 @@ extension MainViewController {
     }
     private func createBasicListLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                             heightDimension: .fractionalHeight(1.0))
+                                              heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
       
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .absolute(44))
+                                              heightDimension: .absolute(70))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                          subitems: [item])
       
@@ -201,4 +205,12 @@ extension MainViewController: FSCalendarDelegate {
             $0.height.equalTo(bounds.height)
         }
     }
+}
+
+extension MainViewController: NewPlanViewSaveDelegate {
+    func didSelectReigster() {
+        self.collectionView.reloadData()
+    }
+    
+    
 }

@@ -10,7 +10,9 @@
 		4F3BA5A651544CE8E85C953A /* Pods_PlanDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */; };
 		9BDE4FF4D255DDA90132C8FE /* Pods_PlanDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */; };
 		CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */; };
-		EE19A1B1298CB512008CDF5C /* NewPlanDoViewController_bak.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19A1B0298CB512008CDF5C /* NewPlanDoViewController_bak.swift */; };
+		EE4EB7EE29A0CAFD001A2CDA /* NewPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */; };
+		EE4EB82C29A0EE86001A2CDA /* ImportantRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */; };
+		EE4EB82F29A109C8001A2CDA /* ImportantButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB82E29A109C8001A2CDA /* ImportantButton.swift */; };
 		EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9077298397FF00797D27 /* AppDelegate.swift */; };
 		EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9079298397FF00797D27 /* SceneDelegate.swift */; };
 		EE9F90812983980000797D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F90802983980000797D27 /* Assets.xcassets */; };
@@ -26,11 +28,7 @@
 		EEFEBA8D29983DDA006219ED /* PlanDoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */; };
 		EEFEBA8F299840D9006219ED /* PlanDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */; };
 		EEFEBA91299851AA006219ED /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA90299851AA006219ED /* Storage.swift */; };
-		EEFEBA93299858D6006219ED /* NewPlanDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA92299858D6006219ED /* NewPlanDoTableViewController.swift */; };
 		EEFEBA962998591E006219ED /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EEFEBA952998591E006219ED /* Kingfisher */; };
-		EEFEBA99299878A1006219ED /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA98299878A1006219ED /* TitleCell.swift */; };
-		EEFEBB132998BA83006219ED /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBB122998BA83006219ED /* DateCell.swift */; };
-		EEFEBB152998BB46006219ED /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBB142998BB46006219ED /* DescriptionCell.swift */; };
 		EEFEBB1A2998D67A006219ED /* c.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFEBB172998D679006219ED /* c.png */; };
 		EEFEBB1B2998D67A006219ED /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFEBB182998D679006219ED /* a.png */; };
 		EEFEBB1C2998D67A006219ED /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFEBB192998D67A006219ED /* b.png */; };
@@ -63,7 +61,9 @@
 		BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo-PlanDoUITests.release.xcconfig"; path = "Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE19A1B0298CB512008CDF5C /* NewPlanDoViewController_bak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanDoViewController_bak.swift; sourceTree = "<group>"; };
+		EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanView.swift; sourceTree = "<group>"; };
+		EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantRatio.swift; sourceTree = "<group>"; };
+		EE4EB82E29A109C8001A2CDA /* ImportantButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantButton.swift; sourceTree = "<group>"; };
 		EE9F9074298397FF00797D27 /* PlanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9F9077298397FF00797D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9F9079298397FF00797D27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +82,6 @@
 		EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoManager.swift; sourceTree = "<group>"; };
 		EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoViewModel.swift; sourceTree = "<group>"; };
 		EEFEBA90299851AA006219ED /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		EEFEBA92299858D6006219ED /* NewPlanDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanDoTableViewController.swift; sourceTree = "<group>"; };
-		EEFEBA98299878A1006219ED /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
-		EEFEBB122998BA83006219ED /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
-		EEFEBB142998BB46006219ED /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		EEFEBB172998D679006219ED /* c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c.png; sourceTree = "<group>"; };
 		EEFEBB182998D679006219ED /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
 		EEFEBB192998D67A006219ED /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
@@ -144,6 +140,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EE4EB82D29A109AC001A2CDA /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EE4EB82E29A109C8001A2CDA /* ImportantButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		EE9F906B298397FF00797D27 = {
 			isa = PBXGroup;
 			children = (
@@ -170,14 +174,13 @@
 		EE9F9076298397FF00797D27 /* PlanDo */ = {
 			isa = PBXGroup;
 			children = (
-				EEFEBA9729987883006219ED /* DetailViewCells */,
+				EE4EB82D29A109AC001A2CDA /* Component */,
 				EE9F9077298397FF00797D27 /* AppDelegate.swift */,
 				EE9F9079298397FF00797D27 /* SceneDelegate.swift */,
 				EE9F90A72983985D00797D27 /* MainViewController.swift */,
-				EEFEBA92299858D6006219ED /* NewPlanDoTableViewController.swift */,
 				EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */,
-				EE19A1B0298CB512008CDF5C /* NewPlanDoViewController_bak.swift */,
 				EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */,
+				EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */,
 				EE9F90802983980000797D27 /* Assets.xcassets */,
 				EE9F90822983980000797D27 /* LaunchScreen.storyboard */,
 				EE9F90852983980000797D27 /* Info.plist */,
@@ -185,6 +188,7 @@
 				EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */,
 				EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */,
 				EEFEBA90299851AA006219ED /* Storage.swift */,
+				EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */,
 			);
 			path = PlanDo;
 			sourceTree = "<group>";
@@ -204,16 +208,6 @@
 				EE9F909A2983980100797D27 /* PlanDoUITestsLaunchTests.swift */,
 			);
 			path = PlanDoUITests;
-			sourceTree = "<group>";
-		};
-		EEFEBA9729987883006219ED /* DetailViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				EEFEBA98299878A1006219ED /* TitleCell.swift */,
-				EEFEBB122998BA83006219ED /* DateCell.swift */,
-				EEFEBB142998BB46006219ED /* DescriptionCell.swift */,
-			);
-			path = DetailViewCells;
 			sourceTree = "<group>";
 		};
 		EEFEBB162998D5F8006219ED /* DataImage */ = {
@@ -475,19 +469,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEFEBA99299878A1006219ED /* TitleCell.swift in Sources */,
 				EE9F90A82983985D00797D27 /* MainViewController.swift in Sources */,
 				EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */,
 				EE9F90E92983E41700797D27 /* PlanDoCollectionViewCell.swift in Sources */,
 				EEFEBA8B29983CF0006219ED /* PlanDo.swift in Sources */,
-				EEFEBB132998BA83006219ED /* DateCell.swift in Sources */,
-				EEFEBA93299858D6006219ED /* NewPlanDoTableViewController.swift in Sources */,
 				EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */,
-				EEFEBB152998BB46006219ED /* DescriptionCell.swift in Sources */,
 				EE9F913029876B7600797D27 /* PlanDoCollectionViewHeader.swift in Sources */,
+				EE4EB82F29A109C8001A2CDA /* ImportantButton.swift in Sources */,
+				EE4EB7EE29A0CAFD001A2CDA /* NewPlanView.swift in Sources */,
 				EEFEBA8F299840D9006219ED /* PlanDoViewModel.swift in Sources */,
-				EE19A1B1298CB512008CDF5C /* NewPlanDoViewController_bak.swift in Sources */,
 				EEFEBA8D29983DDA006219ED /* PlanDoManager.swift in Sources */,
+				EE4EB82C29A0EE86001A2CDA /* ImportantRatio.swift in Sources */,
 				EEFEBA91299851AA006219ED /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
