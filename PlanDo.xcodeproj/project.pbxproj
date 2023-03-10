@@ -12,7 +12,8 @@
 		CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */; };
 		EE4EB7EE29A0CAFD001A2CDA /* NewPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */; };
 		EE4EB82C29A0EE86001A2CDA /* ImportantRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */; };
-		EE4EB82F29A109C8001A2CDA /* ImportantButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB82E29A109C8001A2CDA /* ImportantButton.swift */; };
+		EE4EB83529A227BB001A2CDA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB83429A227BB001A2CDA /* SearchBar.swift */; };
+		EE5283D429AF4535005FF4C1 /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5283D329AF4535005FF4C1 /* PriceTextFieldCell.swift */; };
 		EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9077298397FF00797D27 /* AppDelegate.swift */; };
 		EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F9079298397FF00797D27 /* SceneDelegate.swift */; };
 		EE9F90812983980000797D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F90802983980000797D27 /* Assets.xcassets */; };
@@ -20,18 +21,25 @@
 		EE9F908F2983980100797D27 /* PlanDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F908E2983980100797D27 /* PlanDoTests.swift */; };
 		EE9F90992983980100797D27 /* PlanDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90982983980100797D27 /* PlanDoUITests.swift */; };
 		EE9F909B2983980100797D27 /* PlanDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F909A2983980100797D27 /* PlanDoUITestsLaunchTests.swift */; };
-		EE9F90A82983985D00797D27 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90A72983985D00797D27 /* MainViewController.swift */; };
+		EE9F90A82983985D00797D27 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90A72983985D00797D27 /* MainView.swift */; };
 		EE9F90AB2983987200797D27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE9F90AA2983987200797D27 /* SnapKit */; };
-		EE9F90E92983E41700797D27 /* PlanDoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */; };
-		EE9F913029876B7600797D27 /* PlanDoCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */; };
+		EE9F90E92983E41700797D27 /* PlanDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90E82983E41700797D27 /* PlanDoTableViewCell.swift */; };
+		EE9F913029876B7600797D27 /* PlanDoTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F912F29876B7600797D27 /* PlanDoTableViewHeader.swift */; };
+		EED025D729A9F1C0003D5E30 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025D629A9F1C0003D5E30 /* ListView.swift */; };
+		EED025DD29A9F3B9003D5E30 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025DC29A9F3B9003D5E30 /* CalendarView.swift */; };
+		EED025DF29A9F4C0003D5E30 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025DE29A9F4C0003D5E30 /* AddButton.swift */; };
+		EED025E129A9F9CF003D5E30 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025E029A9F9CF003D5E30 /* MainViewModel.swift */; };
+		EED025E329A9F9EE003D5E30 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025E229A9F9EE003D5E30 /* ListViewModel.swift */; };
+		EED025E529A9F9FC003D5E30 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025E429A9F9FC003D5E30 /* SearchViewModel.swift */; };
+		EED025E729A9FA10003D5E30 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025E629A9FA10003D5E30 /* CalendarViewModel.swift */; };
+		EED025E929A9FA62003D5E30 /* AddButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025E829A9FA62003D5E30 /* AddButtonViewModel.swift */; };
+		EED025EE29AA0154003D5E30 /* FetchNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025ED29AA0154003D5E30 /* FetchNetworkError.swift */; };
+		EED0264329ADE2EC003D5E30 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED0264229ADE2EC003D5E30 /* MainModel.swift */; };
 		EEFEBA8B29983CF0006219ED /* PlanDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8A29983CF0006219ED /* PlanDo.swift */; };
 		EEFEBA8D29983DDA006219ED /* PlanDoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */; };
 		EEFEBA8F299840D9006219ED /* PlanDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */; };
 		EEFEBA91299851AA006219ED /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA90299851AA006219ED /* Storage.swift */; };
 		EEFEBA962998591E006219ED /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EEFEBA952998591E006219ED /* Kingfisher */; };
-		EEFEBB1A2998D67A006219ED /* c.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFEBB172998D679006219ED /* c.png */; };
-		EEFEBB1B2998D67A006219ED /* a.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFEBB182998D679006219ED /* a.png */; };
-		EEFEBB1C2998D67A006219ED /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = EEFEBB192998D67A006219ED /* b.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +71,9 @@
 		E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanView.swift; sourceTree = "<group>"; };
 		EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantRatio.swift; sourceTree = "<group>"; };
-		EE4EB82E29A109C8001A2CDA /* ImportantButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantButton.swift; sourceTree = "<group>"; };
+		EE4EB83429A227BB001A2CDA /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		EE4EB83629A22E4E001A2CDA /* Transforming_Operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming_Operator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EE5283D329AF4535005FF4C1 /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
 		EE9F9074298397FF00797D27 /* PlanDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9F9077298397FF00797D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9F9079298397FF00797D27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,16 +85,23 @@
 		EE9F90942983980100797D27 /* PlanDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9F90982983980100797D27 /* PlanDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoUITests.swift; sourceTree = "<group>"; };
 		EE9F909A2983980100797D27 /* PlanDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EE9F90A72983985D00797D27 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanDoCollectionViewCell.swift; sourceTree = "<group>"; };
-		EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoCollectionViewHeader.swift; sourceTree = "<group>"; };
+		EE9F90A72983985D00797D27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EE9F90E82983E41700797D27 /* PlanDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanDoTableViewCell.swift; sourceTree = "<group>"; };
+		EE9F912F29876B7600797D27 /* PlanDoTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoTableViewHeader.swift; sourceTree = "<group>"; };
+		EED025D629A9F1C0003D5E30 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		EED025DC29A9F3B9003D5E30 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		EED025DE29A9F4C0003D5E30 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		EED025E029A9F9CF003D5E30 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		EED025E229A9F9EE003D5E30 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		EED025E429A9F9FC003D5E30 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		EED025E629A9FA10003D5E30 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		EED025E829A9FA62003D5E30 /* AddButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonViewModel.swift; sourceTree = "<group>"; };
+		EED025ED29AA0154003D5E30 /* FetchNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNetworkError.swift; sourceTree = "<group>"; };
+		EED0264229ADE2EC003D5E30 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		EEFEBA8A29983CF0006219ED /* PlanDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDo.swift; sourceTree = "<group>"; };
 		EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoManager.swift; sourceTree = "<group>"; };
 		EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoViewModel.swift; sourceTree = "<group>"; };
 		EEFEBA90299851AA006219ED /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		EEFEBB172998D679006219ED /* c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = c.png; sourceTree = "<group>"; };
-		EEFEBB182998D679006219ED /* a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a.png; sourceTree = "<group>"; };
-		EEFEBB192998D67A006219ED /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,18 +157,10 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		EE4EB82D29A109AC001A2CDA /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				EE4EB82E29A109C8001A2CDA /* ImportantButton.swift */,
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
 		EE9F906B298397FF00797D27 = {
 			isa = PBXGroup;
 			children = (
-				EEFEBB162998D5F8006219ED /* DataImage */,
+				EE4EB83629A22E4E001A2CDA /* Transforming_Operator.playground */,
 				EE9F9076298397FF00797D27 /* PlanDo */,
 				EE9F908D2983980100797D27 /* PlanDoTests */,
 				EE9F90972983980100797D27 /* PlanDoUITests */,
@@ -174,21 +183,16 @@
 		EE9F9076298397FF00797D27 /* PlanDo */ = {
 			isa = PBXGroup;
 			children = (
-				EE4EB82D29A109AC001A2CDA /* Component */,
+				EED025EC29AA011F003D5E30 /* Entity */,
+				EED025D929A9F1ED003D5E30 /* ViewModels */,
+				EED025D829A9F1D9003D5E30 /* Views */,
 				EE9F9077298397FF00797D27 /* AppDelegate.swift */,
 				EE9F9079298397FF00797D27 /* SceneDelegate.swift */,
-				EE9F90A72983985D00797D27 /* MainViewController.swift */,
-				EE9F912F29876B7600797D27 /* PlanDoCollectionViewHeader.swift */,
-				EE9F90E82983E41700797D27 /* PlanDoCollectionViewCell.swift */,
-				EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */,
 				EE9F90802983980000797D27 /* Assets.xcassets */,
 				EE9F90822983980000797D27 /* LaunchScreen.storyboard */,
 				EE9F90852983980000797D27 /* Info.plist */,
-				EEFEBA8A29983CF0006219ED /* PlanDo.swift */,
 				EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */,
-				EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */,
 				EEFEBA90299851AA006219ED /* Storage.swift */,
-				EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */,
 			);
 			path = PlanDo;
 			sourceTree = "<group>";
@@ -210,14 +214,60 @@
 			path = PlanDoUITests;
 			sourceTree = "<group>";
 		};
-		EEFEBB162998D5F8006219ED /* DataImage */ = {
+		EED025D829A9F1D9003D5E30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EEFEBB182998D679006219ED /* a.png */,
-				EEFEBB192998D67A006219ED /* b.png */,
-				EEFEBB172998D679006219ED /* c.png */,
+				EED025DB29A9F269003D5E30 /* Sub */,
+				EED025DA29A9F24D003D5E30 /* Main */,
 			);
-			path = DataImage;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EED025D929A9F1ED003D5E30 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */,
+				EED025E029A9F9CF003D5E30 /* MainViewModel.swift */,
+				EED025E229A9F9EE003D5E30 /* ListViewModel.swift */,
+				EED025E429A9F9FC003D5E30 /* SearchViewModel.swift */,
+				EED025E629A9FA10003D5E30 /* CalendarViewModel.swift */,
+				EED025E829A9FA62003D5E30 /* AddButtonViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EED025DA29A9F24D003D5E30 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F90A72983985D00797D27 /* MainView.swift */,
+				EE9F912F29876B7600797D27 /* PlanDoTableViewHeader.swift */,
+				EED025D629A9F1C0003D5E30 /* ListView.swift */,
+				EE5283D329AF4535005FF4C1 /* PriceTextFieldCell.swift */,
+				EE4EB83429A227BB001A2CDA /* SearchBar.swift */,
+				EED025DC29A9F3B9003D5E30 /* CalendarView.swift */,
+				EED025DE29A9F4C0003D5E30 /* AddButton.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EED025DB29A9F269003D5E30 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				EE9F90E82983E41700797D27 /* PlanDoTableViewCell.swift */,
+				EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */,
+				EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */,
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		EED025EC29AA011F003D5E30 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EEFEBA8A29983CF0006219ED /* PlanDo.swift */,
+				EED025ED29AA0154003D5E30 /* FetchNetworkError.swift */,
+				EED0264229ADE2EC003D5E30 /* MainModel.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,10 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEFEBB1A2998D67A006219ED /* c.png in Resources */,
 				EE9F90842983980000797D27 /* LaunchScreen.storyboard in Resources */,
-				EEFEBB1B2998D67A006219ED /* a.png in Resources */,
-				EEFEBB1C2998D67A006219ED /* b.png in Resources */,
 				EE9F90812983980000797D27 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,18 +516,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE9F90A82983985D00797D27 /* MainViewController.swift in Sources */,
+				EE4EB83529A227BB001A2CDA /* SearchBar.swift in Sources */,
+				EE9F90A82983985D00797D27 /* MainView.swift in Sources */,
 				EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */,
-				EE9F90E92983E41700797D27 /* PlanDoCollectionViewCell.swift in Sources */,
+				EED025EE29AA0154003D5E30 /* FetchNetworkError.swift in Sources */,
+				EED025DF29A9F4C0003D5E30 /* AddButton.swift in Sources */,
+				EE9F90E92983E41700797D27 /* PlanDoTableViewCell.swift in Sources */,
 				EEFEBA8B29983CF0006219ED /* PlanDo.swift in Sources */,
+				EED025E529A9F9FC003D5E30 /* SearchViewModel.swift in Sources */,
 				EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */,
-				EE9F913029876B7600797D27 /* PlanDoCollectionViewHeader.swift in Sources */,
-				EE4EB82F29A109C8001A2CDA /* ImportantButton.swift in Sources */,
+				EE9F913029876B7600797D27 /* PlanDoTableViewHeader.swift in Sources */,
 				EE4EB7EE29A0CAFD001A2CDA /* NewPlanView.swift in Sources */,
+				EED025DD29A9F3B9003D5E30 /* CalendarView.swift in Sources */,
+				EED0264329ADE2EC003D5E30 /* MainModel.swift in Sources */,
 				EEFEBA8F299840D9006219ED /* PlanDoViewModel.swift in Sources */,
+				EED025E929A9FA62003D5E30 /* AddButtonViewModel.swift in Sources */,
+				EED025D729A9F1C0003D5E30 /* ListView.swift in Sources */,
+				EED025E729A9FA10003D5E30 /* CalendarViewModel.swift in Sources */,
 				EEFEBA8D29983DDA006219ED /* PlanDoManager.swift in Sources */,
 				EE4EB82C29A0EE86001A2CDA /* ImportantRatio.swift in Sources */,
 				EEFEBA91299851AA006219ED /* Storage.swift in Sources */,
+				EED025E129A9F9CF003D5E30 /* MainViewModel.swift in Sources */,
+				EE5283D429AF4535005FF4C1 /* PriceTextFieldCell.swift in Sources */,
+				EED025E329A9F9EE003D5E30 /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

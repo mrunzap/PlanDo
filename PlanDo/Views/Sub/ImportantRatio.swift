@@ -8,6 +8,6 @@
 import UIKit
 
 protocol ImportantRatio {
-    var title: String { get }
-    var style: UIAlertAction.Style { get }
+//    var title: String { get }
+//    var style: UIAlertAction.Style { get }
 }

@@ -15,6 +15,11 @@ protocol NewPlanViewSaveDelegate: AnyObject {
 }
 class NewPlanView: UIViewController {
     
+    let disposeBad = DisposeBag()
+    // Test용: 가능하면 delegate대신 이걸 사용할 예쩡
+
+    //let cancelButtonTappedTest = PublishRelay<>()
+    
     let viewModel = PlanDoViewModel()
     weak var delegate: NewPlanViewSaveDelegate?
     // 시작일 종료일 픽업뷰 감ㅈ싸는 스택뷰
@@ -127,7 +132,12 @@ class NewPlanView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
         layout()
+    }
+    
+    private func bind(){
+
     }
     
     private func layout(){
@@ -185,7 +195,8 @@ class NewPlanView: UIViewController {
         // Todo객체 생성함
         let planDo = PlanDoManager.shared.createPlanDo(title: title, startDate: startDate, endDate: endDate, description: description,isStar: isSelected)
         viewModel.addTodo(planDo)
-        self.delegate?.didSelectReigster()
+        
+        //self.delegate?.didSelectReigster()
         self.dismiss(animated: true)
     }
     var isSelected : Bool = false
@@ -199,3 +210,4 @@ class NewPlanView: UIViewController {
     }
     
 }
+

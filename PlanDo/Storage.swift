@@ -7,9 +7,11 @@
 //
 
 import Foundation
- 
+import RxSwift
+import RxCocoa
+
 public class Storage {
-    
+    let repository: String = "planDo.json"
     private init() { }
     
     // TODO: directory 설명
@@ -54,20 +56,24 @@ public class Storage {
     // TODO: 파일은 Data 타입형태로 읽을수 있음
     // TODO: Data 타입은 Codable decode 가능
     
-    static func retrive<T: Decodable>(_ fileName: String, from directory: Directory, as type: T.Type) -> T? {
-        let url = directory.url.appendingPathComponent(fileName, isDirectory: false)
-        guard FileManager.default.fileExists(atPath: url.path) else { return nil }
-        guard let data = FileManager.default.contents(atPath: url.path) else { return nil }
+    static func retrive<T: Decodable>(_ fileName: String, from directory: Directory,as type: T.Type) -> Single<Result<T, FetchNetworkError>>  {
+            return   Observable.from(["planDo.json"])
+                        .map{result in
+                            let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                            let urlFile = url.appendingPathComponent(fileName, isDirectory: false)
+                            print(urlFile)
+                            guard FileManager.default.fileExists(atPath: urlFile.path) else { return .failure(.invalidJSON) }
+                            guard let planDo = FileManager.default.contents(atPath: urlFile.path) else {return .failure(.invalidURL)}
+                            print("planDo:::::::::::\(planDo)")
+                            do {
+                                let planDoData = try JSONDecoder().decode(type, from: planDo )
+                                return .success(planDoData)
+                            } catch {
+                                return .failure(.invalidJSON)
+                            }
+                        }
+                        .asSingle()
 
-        let decoder = JSONDecoder()
-        print("type:\(type) data:\(data)")
-        do {
-            let model = try decoder.decode(type, from: data)
-            return model
-        } catch let error {
-            print("---> Failed to decode msg: \(error.localizedDescription)")
-            return nil
-        }
     }
     
     static func remove(_ fileName: String, from directory: Directory) {

@@ -26,9 +26,9 @@ class PlanDoManager {
         Storage.store(planDos, to: .documents, as: "planDo.json")
     }
     func retrieveTodo() {
-        planDos = Storage.retrive("planDo.json", from: .documents, as: [PlanDo].self) ?? []
-        
-        let lastId = planDos.last?.id ?? 0
-        PlanDoManager.lastId = lastId
+//        planDos = Storage.retrive("planDo.json", from: .documents, as: [PlanDo].self) ?? []
+//
+//        let lastId = planDos.last?.id ?? 0
+//        PlanDoManager.lastId = lastId
     }
 }

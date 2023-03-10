@@ -15,7 +15,7 @@ enum dayName {
     case today
     case yesterday
 }
-class PlanDoCollectionViewHeader: UICollectionReusableView {
+class PlanDoTableViewHeader: UITableViewHeaderFooterView {
     
     let label :UILabel = {
         let label = UILabel()
@@ -25,6 +25,7 @@ class PlanDoCollectionViewHeader: UICollectionReusableView {
     }()
     override func layoutSubviews() {
         super.layoutSubviews()
+        backgroundColor = .black
         addSubview(label)
         
         label.snp.makeConstraints {
