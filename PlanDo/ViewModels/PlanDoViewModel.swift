@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlanDoViewModel {
+struct PlanDoViewModel {
     
     // PlanDo 모델 참조
     var planDo: PlanDo?

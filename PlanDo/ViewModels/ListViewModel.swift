@@ -9,10 +9,14 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class ListViewModel {
-    
-    // MainViewModel -> ListViewModel TableView에 표시할 데이터
-//    let cellData = PublishSubject<[PlanDo]>()
-
-
+struct ListViewModel {
+    let cellData = PublishSubject<[PlanDo]>()
+    let cellDataDriver: Driver<[PlanDo]>
+  
+    init(){
+       
+        self.cellDataDriver = cellData
+            .asDriver(onErrorJustReturn: [])
+        print("cellData::::\(cellDataDriver)")
+    }
 }

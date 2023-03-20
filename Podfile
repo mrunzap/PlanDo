@@ -10,7 +10,7 @@ target 'PlanDo' do
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'RxGesture'
-  pod 'SkyFloatingLabelTextField', '~> 3.0'
+pod 'RxViewController'
   target 'PlanDoTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,20 +9,66 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class MainViewModel {
+struct MainViewModel {
     
     let disposeBag = DisposeBag()
     let listViewModel = ListViewModel()
     let searchBarViewModel = SearchBarViewModel()
+    let calendarViewModel = CalendarViewModel()
+    let viewDidLoadEvent = PublishRelay<Void>()
     
-    
+    // successData 옵저버블 등록 - 필터링 위함
+    var successData: Observable<[PlanDo]>
+    var successFilterData: Observable<[PlanDo]>
     init(model: MainModel = MainModel()){
-        //let cellData = model.searchPlanDo()
-        // 1. searchBar Enter했을 때 이벤트
-        // 2. 검색버튼 클릭했을 때,
-        // 3. init일 때, 불러옴.
+        
+        
+        let result = Observable
+            .merge(
+                viewDidLoadEvent.asObservable(),
+                searchBarViewModel.searchButtonTapped.asObservable()
+            )
+            .flatMap(model.searchPlanDo)
+            .asObservable()
+            .share()
+        
+        
+        successData = result
+            .compactMap { data -> [PlanDo] in   // Result<[PlanDo],FetchNetworkError>
+                guard case .success(let value) = data else {
+                    return []
+                }
 
-      
+                return value
+            }
+        
+        successFilterData = searchBarViewModel.shouldLoadResult
+            .filter{ $0 != ""}
+            .debug("mainViewModel QueryText")
+            .withLatestFrom(successData){ query, observer in
+                observer.filter { $0.title.contains(query) }
+            }
+            
+        
+        let errorData = result
+            .debug()
+            .compactMap { data -> String? in   // Result<[PlanDo],FetchNetworkError>
+                guard case .failure(let error) = data else {
+                    return nil
+                }
+                return error.localizedDescription
+            }
+        print("successData::::\(successData)")
+        Observable.merge(
+            successData,
+            successFilterData
+        )
+            .debug("successData")
+            .bind(to: listViewModel.cellData)
+            .disposed(by: disposeBag)
+        
+
+        
     }
     
 

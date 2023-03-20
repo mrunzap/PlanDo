@@ -9,6 +9,6 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class CalendarViewModel {
-    
+struct CalendarViewModel {
+    let occurCalenderGesture = PublishRelay<UISwipeGestureRecognizer>()
 }

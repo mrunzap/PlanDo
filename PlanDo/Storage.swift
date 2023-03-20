@@ -63,10 +63,13 @@ public class Storage {
                             let urlFile = url.appendingPathComponent(fileName, isDirectory: false)
                             print(urlFile)
                             guard FileManager.default.fileExists(atPath: urlFile.path) else { return .failure(.invalidJSON) }
+                            
                             guard let planDo = FileManager.default.contents(atPath: urlFile.path) else {return .failure(.invalidURL)}
+                            
                             print("planDo:::::::::::\(planDo)")
                             do {
                                 let planDoData = try JSONDecoder().decode(type, from: planDo )
+                                
                                 return .success(planDoData)
                             } catch {
                                 return .failure(.invalidJSON)

@@ -9,6 +9,6 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class AddButtonViewModel {
+struct AddButtonViewModel {
     
 }

@@ -7,22 +7,18 @@
 
 import RxSwift
 import RxCocoa
+import RxViewController
 
 class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
     
     let searchButton = UIButton()
     
-    //SearchBar 내부의 이벤트
-    let searchButtonTapped = PublishRelay<Void>()
-    
-    //SearchBar 외부로 내보낼 이벤트
-    var shouldLoadResult = Observable<String>.of("")
-    
+   
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        bind()
+       // bind()
         attribute()
         layout()
     }
@@ -31,7 +27,11 @@ class SearchBar: UISearchBar {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
+    func bind(_ viewModel: SearchBarViewModel) {
+        self.rx.text.debug("queryText")
+            .bind(to: viewModel.queryText)
+            
+            .disposed(by: disposeBag)
         Observable
             .merge(
                 // 옵저블 타입으로 변경. searchButtonClicked 하는 것을 관찰함
@@ -40,8 +40,18 @@ class SearchBar: UISearchBar {
                 searchButton.rx.tap.asObservable()
             )
             .debug("searchButtonTapped")
-            .bind(to: searchButtonTapped)
+            .bind(to: viewModel.searchButtonTapped)
             .disposed(by: disposeBag)
+        
+
+        
+        viewModel.searchButtonTapped
+               .asSignal()
+               .debug("asSignal")
+               .emit(to: self.rx.endEditing)
+               .disposed(by: disposeBag)
+
+
     }
     
     private func attribute() {

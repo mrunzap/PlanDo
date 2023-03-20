@@ -8,26 +8,18 @@
 import UIKit
 import FSCalendar
 import SnapKit
-import RxGesture
-import RxCocoa
+import RxViewController
 import RxSwift
 
-
 class MainView: UIViewController{
-    let disposeBag = DisposeBag()
     let addButton = AddButton()
     let searchBar = SearchBar()
     let tableView = ListView()
     let calendar = CalendarView()
-
-    let model = MainModel()
-    
+    let disposeBag = DisposeBag()
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-      
-        print("Main")
-        bind()
+        print("init")
         attribute()
         layout()
     }
@@ -35,58 +27,22 @@ class MainView: UIViewController{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     func bind(_ viewModel: MainViewModel){
-        
-        print("MainViewModel Bind!")
-        //tableView.binding(viewModel.listViewModel)
-        
-    }
-    
-    func bind(){
-        print("Main Bind")
-        let result = model.searchPlanDo()
-            .asObservable()
-            .debug()
-            .share()
-        
-        let successData = result
-            .debug()
-            .compactMap { data -> [PlanDo] in   // Result<[PlanDo],FetchNetworkError>
-                guard case .success(let value) = data else {
-                    return []
-                }
-                return value
-            }
-
-        let errorData = result
-            .debug()
-            .compactMap { data -> String? in   // Result<[PlanDo],FetchNetworkError>
-                guard case .failure(let error) = data else {
-                    return nil
-                }
-                return error.localizedDescription
-            }
-
-        successData
-            .bind(to: tableView.cellData)
+        self.rx.viewWillAppear
+            .map { bool in Void()}
+            .bind(to: viewModel.viewDidLoadEvent)
             .disposed(by: disposeBag)
+
+        calendar.bind(viewModel.calendarViewModel)
+        tableView.bind(viewModel.listViewModel)
+        searchBar.bind(viewModel.searchBarViewModel)
         
-        
-        calendar.occurCalenderGesture
-            .asSignal()
-            .emit(to: self.rx.changeCalenderMode)
-            .disposed(by: disposeBag)
+       
     }
     func attribute(){
         view.backgroundColor = .systemBackground
         calendar.delegate = self
         calendar.dataSource = self
-        // 월~일 글자 폰트 및 사이즈 지정
-        self.calendar.appearance.weekdayFont = .systemFont(ofSize: 20)
-         // 숫자들 글자 폰트 및 사이즈 지정
-         self.calendar.appearance.titleFont = .systemFont(ofSize: 20)
-
     }
     
     func layout(){
@@ -119,23 +75,11 @@ class MainView: UIViewController{
         }
     }
 }
-extension Reactive where Base: MainView {
-    var changeCalenderMode: Binder<UISwipeGestureRecognizer> {
-        return Binder(base) { base, data in
-            print(data)
-            if data.direction == .up {
-                base.calendar.scope = .week
-            } else {
-                base.calendar.scope = .month
-            }
-        }
-    }
-}
 
 
+// FSCalendar week or month 에 따른 view 사이즈 조절
 extension MainView: FSCalendarDelegate,FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        print("ddddddd\(bounds.height)")
         calendar.snp.updateConstraints{make in
             make.top.equalTo(self.searchBar.snp.bottom)
             make.leading.trailing.equalToSuperview()
