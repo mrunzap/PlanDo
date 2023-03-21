@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F3BA5A651544CE8E85C953A /* Pods_PlanDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */; };
 		9BDE4FF4D255DDA90132C8FE /* Pods_PlanDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */; };
-		CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */; };
-		EE4EB7EE29A0CAFD001A2CDA /* NewPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */; };
+		EE4EB7EE29A0CAFD001A2CDA /* NewPlanView_bak.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB7ED29A0CAFD001A2CDA /* NewPlanView_bak.swift */; };
 		EE4EB82C29A0EE86001A2CDA /* ImportantRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */; };
 		EE4EB83529A227BB001A2CDA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4EB83429A227BB001A2CDA /* SearchBar.swift */; };
 		EE5283D429AF4535005FF4C1 /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5283D329AF4535005FF4C1 /* PriceTextFieldCell.swift */; };
@@ -25,6 +23,16 @@
 		EE9F90AB2983987200797D27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE9F90AA2983987200797D27 /* SnapKit */; };
 		EE9F90E92983E41700797D27 /* PlanDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F90E82983E41700797D27 /* PlanDoTableViewCell.swift */; };
 		EE9F913029876B7600797D27 /* PlanDoTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F912F29876B7600797D27 /* PlanDoTableViewHeader.swift */; };
+		EEC894FC29C95BF000184B83 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC894FB29C95BF000184B83 /* HeaderView.swift */; };
+		EEC894FE29C95D6000184B83 /* NewPlanDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC894FD29C95D6000184B83 /* NewPlanDoViewModel.swift */; };
+		EEC8950229C9624600184B83 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8950129C9624600184B83 /* TitleCell.swift */; };
+		EEC8950629C9687E00184B83 /* TitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8950529C9687E00184B83 /* TitleCellViewModel.swift */; };
+		EEC8950829C96A4100184B83 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8950729C96A4100184B83 /* HeaderViewModel.swift */; };
+		EEC8950C29C9703400184B83 /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8950B29C9703400184B83 /* StarButton.swift */; };
+		EEC8950E29C97DC400184B83 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8950D29C97DC400184B83 /* DateCell.swift */; };
+		EEC8951129C97DDC00184B83 /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8951029C97DDC00184B83 /* DateViewModel.swift */; };
+		EEC8955429C98EEE00184B83 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8955329C98EEE00184B83 /* DetailCell.swift */; };
+		EEC8955629C98EFB00184B83 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC8955529C98EFB00184B83 /* DetailViewModel.swift */; };
 		EED025D729A9F1C0003D5E30 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025D629A9F1C0003D5E30 /* ListView.swift */; };
 		EED025DD29A9F3B9003D5E30 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025DC29A9F3B9003D5E30 /* CalendarView.swift */; };
 		EED025DF29A9F4C0003D5E30 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025DE29A9F4C0003D5E30 /* AddButton.swift */; };
@@ -35,6 +43,7 @@
 		EED025E929A9FA62003D5E30 /* AddButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025E829A9FA62003D5E30 /* AddButtonViewModel.swift */; };
 		EED025EE29AA0154003D5E30 /* FetchNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED025ED29AA0154003D5E30 /* FetchNetworkError.swift */; };
 		EED0264329ADE2EC003D5E30 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED0264229ADE2EC003D5E30 /* MainModel.swift */; };
+		EED2181C29C8BA5C00BA3CA3 /* NewPlanDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED2181B29C8BA5C00BA3CA3 /* NewPlanDoView.swift */; };
 		EEFEBA8B29983CF0006219ED /* PlanDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8A29983CF0006219ED /* PlanDo.swift */; };
 		EEFEBA8D29983DDA006219ED /* PlanDoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */; };
 		EEFEBA8F299840D9006219ED /* PlanDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */; };
@@ -62,14 +71,8 @@
 /* Begin PBXFileReference section */
 		4251F1CE7CD1C16C9BD72CCF /* Pods-PlanDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo.debug.xcconfig"; path = "Target Support Files/Pods-PlanDo/Pods-PlanDo.debug.xcconfig"; sourceTree = "<group>"; };
 		42A82B7299F027826A894AB6 /* Pods-PlanDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo.release.xcconfig"; path = "Target Support Files/Pods-PlanDo/Pods-PlanDo.release.xcconfig"; sourceTree = "<group>"; };
-		61FE6ABF8DE7F0C3380D1B38 /* Pods-PlanDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.release.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.release.xcconfig"; sourceTree = "<group>"; };
-		792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDo_PlanDoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9359B8E7328C8BEB72342FE0 /* Pods-PlanDo-PlanDoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo-PlanDoUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDo-PlanDoUITests.release.xcconfig"; path = "Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanDoTests.debug.xcconfig"; path = "Target Support Files/Pods-PlanDoTests/Pods-PlanDoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanView.swift; sourceTree = "<group>"; };
+		EE4EB7ED29A0CAFD001A2CDA /* NewPlanView_bak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanView_bak.swift; sourceTree = "<group>"; };
 		EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantRatio.swift; sourceTree = "<group>"; };
 		EE4EB83429A227BB001A2CDA /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		EE4EB83629A22E4E001A2CDA /* Transforming_Operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming_Operator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -88,6 +91,16 @@
 		EE9F90A72983985D00797D27 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EE9F90E82983E41700797D27 /* PlanDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanDoTableViewCell.swift; sourceTree = "<group>"; };
 		EE9F912F29876B7600797D27 /* PlanDoTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoTableViewHeader.swift; sourceTree = "<group>"; };
+		EEC894FB29C95BF000184B83 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EEC894FD29C95D6000184B83 /* NewPlanDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanDoViewModel.swift; sourceTree = "<group>"; };
+		EEC8950129C9624600184B83 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		EEC8950529C9687E00184B83 /* TitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellViewModel.swift; sourceTree = "<group>"; };
+		EEC8950729C96A4100184B83 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
+		EEC8950B29C9703400184B83 /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
+		EEC8950D29C97DC400184B83 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		EEC8951029C97DDC00184B83 /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		EEC8955329C98EEE00184B83 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		EEC8955529C98EFB00184B83 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		EED025D629A9F1C0003D5E30 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EED025DC29A9F3B9003D5E30 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		EED025DE29A9F4C0003D5E30 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
@@ -98,6 +111,7 @@
 		EED025E829A9FA62003D5E30 /* AddButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonViewModel.swift; sourceTree = "<group>"; };
 		EED025ED29AA0154003D5E30 /* FetchNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNetworkError.swift; sourceTree = "<group>"; };
 		EED0264229ADE2EC003D5E30 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		EED2181B29C8BA5C00BA3CA3 /* NewPlanDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlanDoView.swift; sourceTree = "<group>"; };
 		EEFEBA8A29983CF0006219ED /* PlanDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDo.swift; sourceTree = "<group>"; };
 		EEFEBA8C29983DDA006219ED /* PlanDoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoManager.swift; sourceTree = "<group>"; };
 		EEFEBA8E299840D9006219ED /* PlanDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDoViewModel.swift; sourceTree = "<group>"; };
@@ -119,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F3BA5A651544CE8E85C953A /* Pods_PlanDoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB90A68A5E39F9D1036F27B /* Pods_PlanDo_PlanDoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				BE0DF282AFD67417F0BAE2DB /* Pods_PlanDo.framework */,
-				792AB3D5EF1C84D03A033409 /* Pods_PlanDo_PlanDoUITests.framework */,
-				A97FE77B0E32B57E12A4F635 /* Pods_PlanDoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,10 +159,6 @@
 			children = (
 				4251F1CE7CD1C16C9BD72CCF /* Pods-PlanDo.debug.xcconfig */,
 				42A82B7299F027826A894AB6 /* Pods-PlanDo.release.xcconfig */,
-				9359B8E7328C8BEB72342FE0 /* Pods-PlanDo-PlanDoUITests.debug.xcconfig */,
-				DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */,
-				E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */,
-				61FE6ABF8DE7F0C3380D1B38 /* Pods-PlanDoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -214,6 +220,72 @@
 			path = PlanDoUITests;
 			sourceTree = "<group>";
 		};
+		EEC894FA29C95BD200184B83 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				EEC894FD29C95D6000184B83 /* NewPlanDoViewModel.swift */,
+				EED2181B29C8BA5C00BA3CA3 /* NewPlanDoView.swift */,
+				EEC8950029C961FE00184B83 /* Cell */,
+				EEC894FF29C961F400184B83 /* Header */,
+			);
+			path = Sub;
+			sourceTree = "<group>";
+		};
+		EEC894FF29C961F400184B83 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EEC894FB29C95BF000184B83 /* HeaderView.swift */,
+				EEC8950729C96A4100184B83 /* HeaderViewModel.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EEC8950029C961FE00184B83 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8950929C96FE000184B83 /* Title */,
+				EEC8950F29C97DCA00184B83 /* Date */,
+				EEC8955229C98EC300184B83 /* Detail */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEC8950929C96FE000184B83 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8950A29C9700300184B83 /* StarButton */,
+				EEC8950129C9624600184B83 /* TitleCell.swift */,
+				EEC8950529C9687E00184B83 /* TitleCellViewModel.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		EEC8950A29C9700300184B83 /* StarButton */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8950B29C9703400184B83 /* StarButton.swift */,
+			);
+			path = StarButton;
+			sourceTree = "<group>";
+		};
+		EEC8950F29C97DCA00184B83 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8950D29C97DC400184B83 /* DateCell.swift */,
+				EEC8951029C97DDC00184B83 /* DateViewModel.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		EEC8955229C98EC300184B83 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EEC8955329C98EEE00184B83 /* DetailCell.swift */,
+				EEC8955529C98EFB00184B83 /* DetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		EED025D829A9F1D9003D5E30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,9 +325,10 @@
 		EED025DB29A9F269003D5E30 /* Sub */ = {
 			isa = PBXGroup;
 			children = (
+				EED2181A29C8BA2D00BA3CA3 /* NewPlanDo */,
 				EE9F90E82983E41700797D27 /* PlanDoTableViewCell.swift */,
 				EE4EB82B29A0EE86001A2CDA /* ImportantRatio.swift */,
-				EE4EB7ED29A0CAFD001A2CDA /* NewPlanView.swift */,
+				EE4EB7ED29A0CAFD001A2CDA /* NewPlanView_bak.swift */,
 			);
 			path = Sub;
 			sourceTree = "<group>";
@@ -268,6 +341,14 @@
 				EED0264229ADE2EC003D5E30 /* MainModel.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		EED2181A29C8BA2D00BA3CA3 /* NewPlanDo */ = {
+			isa = PBXGroup;
+			children = (
+				EEC894FA29C95BD200184B83 /* Sub */,
+			);
+			path = NewPlanDo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +381,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE9F90A12983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDoTests" */;
 			buildPhases = (
-				23623D38388A1B13F335F80E /* [CP] Check Pods Manifest.lock */,
 				EE9F90862983980100797D27 /* Sources */,
 				EE9F90872983980100797D27 /* Frameworks */,
 				EE9F90882983980100797D27 /* Resources */,
@@ -319,11 +399,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE9F90A42983980100797D27 /* Build configuration list for PBXNativeTarget "PlanDoUITests" */;
 			buildPhases = (
-				72F63A55C3D22B469B935151 /* [CP] Check Pods Manifest.lock */,
 				EE9F90902983980100797D27 /* Sources */,
 				EE9F90912983980100797D27 /* Frameworks */,
 				EE9F90922983980100797D27 /* Resources */,
-				3496EFA37DC65F2CEE624A3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,45 +487,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23623D38388A1B13F335F80E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlanDoTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3496EFA37DC65F2CEE624A3A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlanDo-PlanDoUITests/Pods-PlanDo-PlanDoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4F41D4DA862148C560575D5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,28 +503,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PlanDo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		72F63A55C3D22B469B935151 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlanDo-PlanDoUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -517,24 +534,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4EB83529A227BB001A2CDA /* SearchBar.swift in Sources */,
+				EED2181C29C8BA5C00BA3CA3 /* NewPlanDoView.swift in Sources */,
 				EE9F90A82983985D00797D27 /* MainView.swift in Sources */,
 				EE9F9078298397FF00797D27 /* AppDelegate.swift in Sources */,
 				EED025EE29AA0154003D5E30 /* FetchNetworkError.swift in Sources */,
+				EEC8950229C9624600184B83 /* TitleCell.swift in Sources */,
 				EED025DF29A9F4C0003D5E30 /* AddButton.swift in Sources */,
 				EE9F90E92983E41700797D27 /* PlanDoTableViewCell.swift in Sources */,
 				EEFEBA8B29983CF0006219ED /* PlanDo.swift in Sources */,
 				EED025E529A9F9FC003D5E30 /* SearchViewModel.swift in Sources */,
 				EE9F907A298397FF00797D27 /* SceneDelegate.swift in Sources */,
 				EE9F913029876B7600797D27 /* PlanDoTableViewHeader.swift in Sources */,
-				EE4EB7EE29A0CAFD001A2CDA /* NewPlanView.swift in Sources */,
+				EE4EB7EE29A0CAFD001A2CDA /* NewPlanView_bak.swift in Sources */,
 				EED025DD29A9F3B9003D5E30 /* CalendarView.swift in Sources */,
 				EED0264329ADE2EC003D5E30 /* MainModel.swift in Sources */,
+				EEC8950C29C9703400184B83 /* StarButton.swift in Sources */,
 				EEFEBA8F299840D9006219ED /* PlanDoViewModel.swift in Sources */,
+				EEC8955629C98EFB00184B83 /* DetailViewModel.swift in Sources */,
 				EED025E929A9FA62003D5E30 /* AddButtonViewModel.swift in Sources */,
 				EED025D729A9F1C0003D5E30 /* ListView.swift in Sources */,
 				EED025E729A9FA10003D5E30 /* CalendarViewModel.swift in Sources */,
+				EEC8950629C9687E00184B83 /* TitleCellViewModel.swift in Sources */,
 				EEFEBA8D29983DDA006219ED /* PlanDoManager.swift in Sources */,
+				EEC894FE29C95D6000184B83 /* NewPlanDoViewModel.swift in Sources */,
+				EEC8955429C98EEE00184B83 /* DetailCell.swift in Sources */,
+				EEC8950E29C97DC400184B83 /* DateCell.swift in Sources */,
+				EEC8951129C97DDC00184B83 /* DateViewModel.swift in Sources */,
 				EE4EB82C29A0EE86001A2CDA /* ImportantRatio.swift in Sources */,
+				EEC8950829C96A4100184B83 /* HeaderViewModel.swift in Sources */,
+				EEC894FC29C95BF000184B83 /* HeaderView.swift in Sources */,
 				EEFEBA91299851AA006219ED /* Storage.swift in Sources */,
 				EED025E129A9F9CF003D5E30 /* MainViewModel.swift in Sources */,
 				EE5283D429AF4535005FF4C1 /* PriceTextFieldCell.swift in Sources */,
@@ -758,7 +786,6 @@
 		};
 		EE9F90A22983980100797D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5EA0CFC4FE98D37AD883C1E /* Pods-PlanDoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -779,7 +806,6 @@
 		};
 		EE9F90A32983980100797D27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61FE6ABF8DE7F0C3380D1B38 /* Pods-PlanDoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -800,7 +826,6 @@
 		};
 		EE9F90A52983980100797D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9359B8E7328C8BEB72342FE0 /* Pods-PlanDo-PlanDoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -819,7 +844,6 @@
 		};
 		EE9F90A62983980100797D27 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB9459CB31B8F77317400368 /* Pods-PlanDo-PlanDoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

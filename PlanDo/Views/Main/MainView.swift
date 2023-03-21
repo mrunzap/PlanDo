@@ -10,6 +10,7 @@ import FSCalendar
 import SnapKit
 import RxViewController
 import RxSwift
+import Floaty
 
 class MainView: UIViewController{
     let addButton = AddButton()
@@ -17,6 +18,8 @@ class MainView: UIViewController{
     let tableView = ListView()
     let calendar = CalendarView()
     let disposeBag = DisposeBag()
+    let newPlaDoView = NewPlanDoView()
+    let floaty = Floaty()
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         print("init")
@@ -36,21 +39,31 @@ class MainView: UIViewController{
         calendar.bind(viewModel.calendarViewModel)
         tableView.bind(viewModel.listViewModel)
         searchBar.bind(viewModel.searchBarViewModel)
-        
+        newPlaDoView.bind(viewModel.newPlaDoViewModel)
        
     }
     func attribute(){
         view.backgroundColor = .systemBackground
         calendar.delegate = self
         calendar.dataSource = self
+        floaty.sticky = true
+        floaty.handleFirstItemDirectly = true
+        floaty.addItem(title: "") { _ in
+            self.presentNewPlanDo()
+        }
     }
     
+    func presentNewPlanDo(){
+        
+        self.present(newPlaDoView , animated: true)
+    }
     func layout(){
         view.addSubview(searchBar)
         view.addSubview(calendar)
         view.addSubview(tableView)
         view.addSubview(addButton)
         
+        view.addSubview(floaty)
         searchBar.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
@@ -68,7 +81,7 @@ class MainView: UIViewController{
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
 
-        addButton.snp.makeConstraints {
+        floaty.snp.makeConstraints {
             $0.height.width.equalTo(70)
             $0.bottom.equalToSuperview().inset(30)
             $0.trailing.equalToSuperview().inset(70)

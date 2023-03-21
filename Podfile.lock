@@ -1,4 +1,5 @@
 PODS:
+  - Floaty (4.2.0)
   - FSCalendar (2.8.2)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -14,6 +15,7 @@ PODS:
     - RxSwift (~> 6.0)
 
 DEPENDENCIES:
+  - Floaty (~> 4.2.0)
   - FSCalendar
   - RxCocoa (= 6.5.0)
   - RxGesture
@@ -22,6 +24,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Floaty
     - FSCalendar
     - RxCocoa
     - RxGesture
@@ -30,6 +33,7 @@ SPEC REPOS:
     - RxViewController
 
 SPEC CHECKSUMS:
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
@@ -37,6 +41,6 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxViewController: 56486fa0afd629a1d6b5ba077f3b8cd9dc31b5d2
 
-PODFILE CHECKSUM: 3594da1100b7463bf3ea2ebc86d538875fc681d7
+PODFILE CHECKSUM: 8ebddb0c8f3a53b22cc7f98d940d98ca098e3a28
 
 COCOAPODS: 1.11.3

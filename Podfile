@@ -10,14 +10,6 @@ target 'PlanDo' do
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
   pod 'RxGesture'
-pod 'RxViewController'
-  target 'PlanDoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'PlanDoUITests' do
-    # Pods for testing
-  end
-
+  pod 'Floaty', '~> 4.2.0'
+  pod 'RxViewController'
 end

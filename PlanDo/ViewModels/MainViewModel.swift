@@ -15,6 +15,7 @@ struct MainViewModel {
     let listViewModel = ListViewModel()
     let searchBarViewModel = SearchBarViewModel()
     let calendarViewModel = CalendarViewModel()
+    let newPlaDoViewModel = NewPlanDoViewModel()
     let viewDidLoadEvent = PublishRelay<Void>()
     
     // successData 옵저버블 등록 - 필터링 위함
@@ -29,6 +30,7 @@ struct MainViewModel {
                 searchBarViewModel.searchButtonTapped.asObservable()
             )
             .flatMap(model.searchPlanDo)
+            .debug()
             .asObservable()
             .share()
         
@@ -41,6 +43,7 @@ struct MainViewModel {
 
                 return value
             }
+            .debug()
         
         successFilterData = searchBarViewModel.shouldLoadResult
             .filter{ $0 != ""}
